@@ -1,9 +1,9 @@
 package com.own_world.chatapp.Unit
 
-class User {
-    var name: String = ""
-    var email: String = ""
-    var uid: String = ""
+class User{
+    var name: String? = null
+    var email: String? = null
+    var uid: String? = null
 
     constructor(){}
     constructor(name: String, email: String, uid: String) {

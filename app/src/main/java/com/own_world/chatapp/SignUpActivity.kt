@@ -9,7 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import com.own_world.chatapp.Unit.USER_COLLECTION
+import com.own_world.chatapp.Unit.USER_DATA
 import com.own_world.chatapp.Unit.User
 import com.own_world.chatapp.databinding.ActivitySignUpBinding
 
@@ -63,7 +63,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun addUserToDatabase(name: String, email: String, uid: String) {
       mDbRef = FirebaseDatabase.getInstance()
-        mDbRef.getReference(USER_COLLECTION).child(uid).setValue(User(name, email, uid))
+        mDbRef.getReference(USER_DATA).child(uid).setValue(User(name, email, uid))
 
     }
 }
